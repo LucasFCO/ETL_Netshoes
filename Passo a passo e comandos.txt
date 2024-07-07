@@ -1,0 +1,34 @@
+# Definir qual versão do Python antes de iniciar.
+pyenv local 3.12.1
+
+# criar o diretorio do ambiente isolado.
+python -m venv .venv
+
+# entrar no ambiente isolado e ativalo.
+source .venv/Scripts/activate
+
+# criar o arquivo '.gitignore' para evitar de salvar arquivos desnecessarios no github.
+buscar no google 'gitignore toptal python' copiar e colar no arquivo 'gitignore' criado. (https://www.toptal.com/developers/gitignore)
+
+## só depois de criar o gitignore seguir com os proximos passos. Essencial principalmente para usar o github.
+
+# seguir com os comandos indicados no github.
+# criar o arquivo 'README' no github.
+echo "# ETL_Netshoes" 
+
+# iniciar o  github 
+git init
+
+#adiciona todos os arquivos dentro do github
+git add .
+
+
+# e agora eu vou fazer o commit que é adicionar e salvar esses arquivos.
+git commit -m "first commit"
+
+
+
+
+git branch -M main
+git remote add origin git@github.com:LucasFCO/ETL_Netshoes.git
+git push -u origin main
