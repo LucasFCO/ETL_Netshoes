@@ -1,3 +1,6 @@
+Parte 1) Preparando repositorio do github e vscode.
+
+##### Começa aqui #####
 # Definir qual versão do Python antes de iniciar.
 pyenv local 3.12.1
 
@@ -26,9 +29,55 @@ git add .
 # e agora eu vou fazer o commit que é adicionar e salvar esses arquivos.
 git commit -m "first commit"
 
-
-
-
+# cria a branch main
 git branch -M main
+
+# redireciona os arquivos para o github
 git remote add origin git@github.com:LucasFCO/ETL_Netshoes.git
+
+# o push vai salvar os arquivos no github, se der certo vai pedir a senha: oito...
 git push -u origin main
+
+Parte 2) Web scraping
+Será feito uma requisição e será recebido um HTML como uma resposta do site e depois vai fazer o Parser, uma especie de/para.
+- Request: é assessar o site
+- Parser: é fazer um de -> para ligando cada elemento a uma informação.
+- Next page: é avançar na coleta
+
+# primeiro cria a estrutura basica do projeto com o essencial para realizar uma coleta 
+scrapy startproject coleta
+
+# entar no diretorio criado
+cd coleta
+
+# criar o arquivo com o Script principal do site da coleta. passar o nome do arquivo a ser gerado e o link da pag.
+scrapy genspider nome_script  url_site...
+
+# Deletar os script do Middleware e pipelines pois é um projeto pequeno para aprendizado e a coleta será pequena. 
+
+
+
+2.1) Testar o Parser dos elentos do scrapy via terminal com os comandos:
+
+# Listar os comandos no terminal
+scrapy shell
+
+# Fazer a requisição : ao fazer a requisição será negado,por isso deve usar o USER Agent
+item = fetch (url...) 
+
+# para isso basta buscar no google por 
+'agent user my'
+
+# colar o resultado no Script de settigs na variavel criada.
+'USER AGENT = xxxxx'.
+
+#  Depois sair do terminal e voltar novamente
+exit()
+
+# Com o comando 'response' pode visualizar a resposta e todo HTML 
+response.text
+
+# tudo funcionando dar um commit (duvidas ir em (0:48:15) primeiro commit)
+
+
+
